@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/*
+# Plugin Comments
+# Framework: Python Web2py (www.web2py.com)
+#
+# Copyright (c) 2010- Mulone, Pablo Martin (http://martin.tecnodoc.com.ar/)
+# License Code: BSD
+# License Content: Creative Commons Attribution 3.0
+#
+# Copyright (c) 2011, Martin Mulone
+# All rights reserved.
+#
+*/
+
+#comments {
+	margin-top: 30px;
+	padding-top: 5px;
+	border-top: 1px solid #dedede;
+}
+#comments #displaybox {
+	display: none;
+	padding: 5px 15px 5px 5px;
+	background-color: #eaeaea;
+}
+#comments #displaybox .close {
+	float: right;
+	margin: 0px;
+	padding: 6px;
+	right: 0px;
+	top: 0px;
+}
+#comments .order {
+	margin-top: 8px;
+	padding-top: 4px;
+	border-top: 1px solid #dedede;
+}
+#comments .comment {
+	margin: 10px 0px 10px 0px;
+	padding: 5px;
+}
+#comments .menu {
+	margin: 10px 0px 10px 0px;
+}
+#comments .author {
+	margin: 10px 0px 10px 0px;
+	padding: 2px 2px 2px 2px;
+	/*border-bottom: 1px solid #dedede;*/
+}
+#comments .author .avatar {
+	padding: 4px;
+	/*height: 100%;*/
+	float: left;
+	}
+#comments .author .name {
+	margin-left: 10px;
+	padding: 5px;
+	float: left;
+	}
+#comments .author .date {
+	float: left;
+	font-size: 11px;
+	margin-left: 10px;
+	padding: 5px;
+	color: #555;
+	}
+#comments .author .inreply {
+	float: left;
+	margin-left: 10px;
+	font-size: 11px;
+	padding: 5px;
+	color: #555;
+	}
+#comments .author .id {
+	padding: 5px;
+	float: right;
+	font-size: 24px;
+	font-weight: bold;
+	color: #888;
+	}
+#comments .author .votes {
+	float: right;
+	padding: 5px;
+	}
+#comments .author .votes .voteup {
+	float: left;
+	padding-right: 2px;
+	}
+#comments .author .votes .votecount {
+	float: left;
+	padding-right: 2px;
+	}
+#comments .author .votes .votedown {
+	float: left;
+	padding-right: 2px;
+	}
+#comments .response {
+	margin-top: 5px;
+	padding: 0px 0px 5px 0px;
+	border-bottom: 1px solid #dedede;
+}
+#comments .replyform {
+	/*display: none;*/
+	margin: 10px 0px 10px 0px;
+}
+#comments .replyform .error {
+	background: #c30000;
+	color: #fff;
+	font-weight: bold;
+	padding: 4px;
+}
+#comments .replyform h2 {
+	margin: 10px 0px 10px 0px;
+}
+#comments .replyform {
+	margin: 10px 0px 10px 0px;
+}
+#comments .replyform textarea {
+	font-size: 14px;
+	height: 90px;
+	width: 99%;
+}
+#comments .replyform .buttons {
+	margin: 10px 0px 10px 0px;
+}
+#comments .replyform input {
+
+}
+#comments .replyform form {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/* Results PAGES */
+#comments .pagination {
+	/*background: #f1f1f1;*/
+	padding: 5px;
+	color: #333;
+	border-bottom: 1px solid #e5e5e5;
+        }
+#comments .pagination .title {
+	float: left;
+        }
+#comments .pagination .pages {
+	float: right;
+}
+#comments .pagination .pages h2 {
+	margin: 30px 0px 30px 0px;
+	color: #555;
+	font-size: 14px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #dedede;
+}
+#comments .pagination .pages ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#comments .pagination .pages ul li {
+	display: inline;
+}
+#comments .pagination .pages ul li a {
+	margin: 0px 10px 0px 0px;
+	color: #555;
+	padding: 5px;
+	text-decoration: none;
+}
+#comments .pagination .pages ul li a:hover {
+	background: #e1e1e1;
+}
+#comments .pagination .pages .current {
+	font-weight: bold;
+}
+
+/* Don't remove this line */
+#plugin_comments_comments_reply_id__row {
+	display: none;
+}
+
+/* Janrain Providers */
+#comments #providers #facebook .label {
+background-position: 0px 0px;
+}
+#comments #providers #google .label {
+background-position: 0px -80px;
+}
+#comments #providers #linkedin .label {
+background-position: 0px -256px;
+}
+#comments #providers #myspace .label {
+background-position: 0px -32px;
+}
+#comments #providers #twitter .label {
+background-position: 0px -16px;
+}
+#comments #providers #live_id .label {
+background-position: 0px -48px;
+}
+#comments #providers #yahoo .label {
+background-position: 0px -64px;
+}
+#comments #providers .label {
+background: url(../images/providers_janrain.png) no-repeat;
+display: block;
+height: 16px;
+padding: 0px 0px 0px 20px;
+}
+#comments #providers li {
+margin: 0px 5px 0px 0px;
+color: #666;
+cursor: default;
+list-style-type: none;
+float: left;
+}
+
+.markItUpContainer textarea {display: inline !important;}

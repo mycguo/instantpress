@@ -1,0 +1,15 @@
+{{extend 'plugins/admin/layout.html'}}
+
+<div class="sixteen columns content">
+
+<div class="post_nav"> Page  &raquo; <a href="#">{{=T('Pages & Widgets')}}</a> </div>
+
+<div class="toolbar">
+{{=A(SPAN(_class='icon add'), SPAN(T('Add')),_href="%s"%URL(i2padmin.controller_name,'pageadd'), _class='w2p_trap button16')}}
+</div>
+
+{{=table}}
+
+</div>
+
+ <div style="clear: both;"></div>

@@ -1,0 +1,423 @@
+/*
+* Skeleton V1.0.3
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 7/17/2011
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+body {background: #FAFAFA;}
+.maincontent {background: #FFF;
+              border-bottom: 1px #EAEAEA solid;
+              border-left: 1px #EAEAEA solid;
+              border-right: 1px #EAEAEA solid;
+              padding-top: 5px;}
+
+th, td { padding: 0.1em 0.5em 0.1em 0.5em;}
+
+label {
+    white-space: nowrap;
+}
+
+label, b, th {
+    font-weight: bold;
+}
+
+/*
+fieldset { padding: 16px; border: 1px #DEDEDE solid;}
+fieldset legend {text-transform:uppercase; font-weight: bold;}
+*/
+fieldset { padding: 16px; border-top: 1px #DEDEDE solid;}
+fieldset legend {text-transform:uppercase; font-weight: bold;
+                 padding: 4px 16px 4px 16px; background: #f1f1f1;}
+
+td.w2p_fl, td.w2p_fw, td.w2p_fc { vertical-align:top; }
+td.w2p_fl { text-align:right; }
+td.w2p_fl,  td.w2p_fw {padding-right: 7px;}
+
+tr#submit_record__row {background: #FAFAFA; border-top: 1px solid #E5E5E5; padding: 5px;}
+#topbar {background: #444; border-bottom: 4px solid #005aa0;}
+.authnav{background: #555; border-right: 1px solid #919191; border-left: 1px solid #919191;}
+.statusbar {background: #555; border-top: 1px #919191 solid; border-right: 1px solid #919191; border-left: 1px solid #919191;}
+.logoapp {float: left; color: #fff; padding-right: 16px;}
+.logoapp h4 {color: #fff;}
+.footer { font-size: 11px;
+          margin-top: 30px; padding: 8px;  border-top: 1px #DEDEDE solid;
+          background: #444; color: #eaeaea;
+          border-right: 1px solid #444; border-left: 1px solid #444;
+          border-bottom: 1px solid #444;}
+.footer a {color: #eaeaea;}
+.panelnotice {font-size: 11px; color: #fafafa; text-align: center;}
+.auth_separator{margin: 0px 5px 0px 5px; color: #fff;}
+.auth_navbar {
+   font-size: 11px;
+   color: #ccc;
+   /*top: 0px;*/
+   float: right;
+   padding: 4px 15px 4px 15px;
+}
+.auth_navbar a {
+   text-transform:capitalize;
+   text-decoration: none;
+   color: #fff;
+}
+.auth_navbar a:hover {
+    text-decoration: underline;
+}
+.navigationbar { margin-bottom: 10px; padding-bottom: 4px;
+                 border-bottom: 1px solid #ddd;}
+.sidebar-left {border-left: 1px solid #ddd;}
+
+/* Fix */
+#auth_user_remember__row label {display: inline;}
+#web2py_user_form td { vertical-align:top; }
+select[multiple="multiple"] { height: 150px;}
+
+.header_title {color: #fff;}
+
+
+/*
+*Grid
+*
+* The default style for SQLFORM.grid even using jquery-iu or another ui framework
+* will look better with the declarations below
+* if needed to remove base.css consider keeping these following lines in some css file.
+*/
+.web2py_grid a { text-decoration:none;}
+.web2py_grid table { width: 100% }
+.web2py_grid td { white-space:nowrap; }
+.web2py_grid th { background-color:#EAEAEA; }
+.web2py_grid tbody th,
+.web2py_grid tbody td {
+    padding: 5px 10px 5px;
+    line-height: 13.5px;
+    vertical-align: middle;
+}
+.web2py_grid input:focus,
+.web2py_grid textarea:focus,
+.web2py_grid select:focus {
+        border: 1px solid #ffffff;
+        -webkit-box-shadow: 0px 0px 6px #007eff;
+        -moz-box-shadow: 0px 0px 5px #007eff;
+        box-shadow: 0px 0px 5px #007eff;
+    }
+
+.web2py_grid thead th {
+    padding-top: 9px;
+    font-weight: bold;
+    border-bottom: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+}
+.web2py_grid tr.odd {background-color: #F9F9F9;}
+.web2py_grid tr:hover {background-color: #F5F5F5; }
+
+.web2py_breadcrumbs a {
+    line-height: 20px; margin-right: 5px; display: inline-block;
+    padding: 3px 5px 3px 5px;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    color: #3C3C3D;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    white-space: nowrap; overflow: visible; cursor: pointer;
+    background:#ECECEC;
+    text-decoration: none; border: 1px solid #CACACA;
+    -webkit-border-radius: 2px; -moz-border-radius: 2px;
+    -webkit-background-clip: padding-box; border-radius: 2px;
+    outline: none; position: relative; zoom: 1; *display: inline;
+}
+
+.web2py_console {
+    /*background-color: #f2f2f2; padding: 5px; border-bottom: 1px solid #DDD; */
+    /*min-height: 60px;*/
+    /*text-align:center;*/
+}
+
+
+.web2py_search_actions{
+    width:40%;
+    float:left;
+    text-align:left;
+
+}
+.web2py_grid .row_buttons{
+    min-height:25px;
+}
+.web2py_grid>.row_buttons a{
+    margin:10px;
+}
+
+.web2py_grid .row_buttons a,
+.web2py_paginator ul li a,
+.web2py_search_actions a,
+.web2py_console input[type=submit],
+.web2py_console input[type=button],
+.web2py_console button {
+    line-height: 13.5px; margin-right: 5px; display: inline-block;
+    padding: 3px 5px 3px 5px;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    font-size: 12px;
+    color: #3C3C3D;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    background:#ECECEC;
+    white-space: nowrap; overflow: visible;
+    cursor: pointer; text-decoration: none;
+    border: 1px solid #CACACA;
+    -webkit-border-radius: 2px; -moz-border-radius: 2px;
+    -webkit-background-clip: padding-box; border-radius: 2px;
+    outline: none; position: relative; zoom: 1; *display: inline;
+}
+.web2py_grid .row_buttons a:hover,
+.web2py_search_actions a:hover,
+.web2py_console input[type=submit]:hover,
+.web2py_console input[type=button]:hover,
+.web2py_paginator ul li a:hover {
+    color: #FFFFFF; border-color: #388AD4; text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    background-position: 0 -40px; background-color: #2D7DC5;
+}
+.web2py_counter {
+    margin-top: 5px;
+    margin-right:5px;
+    width:35%;
+    float:right;
+    text-align:right;
+}
+
+.web2py_table, .web2py_form {
+
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+/*Fix firefox problem*/
+.web2py_table {clear: both; display: block;}
+
+.web2py_paginator {
+    padding: 5px;
+    color: #333;
+    text-align:right;
+    background-color: #f2f2f2; padding: 5px; border-bottom: 1px solid #DDD;
+
+}
+.web2py_paginator ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.web2py_paginator ul li {
+    display: inline;
+}
+.web2py_paginator .current {
+    font-weight: bold;
+}
+
+/*********** Flash ***********/
+
+div.error {
+    padding-left: 20px;
+    color: #ec6f5a;
+    text-transform:capitalize;
+    background: url('../images/error.png') 0 0 no-repeat;
+}
+
+/*--------------------------------------------------
+Alerts
+-------------------------------------------------- */
+
+div.flash { display: block; padding: 6px 7px; font-weight: bold; font-size: 13px; background: #eee; border: 1px solid rgba(0,0,0,0.1); margin-bottom: 12px; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; text-shadow: 0px 1px rgba(255,255,255,0.9); position: relative; }
+.flash.success { background-color: #7fae00; color: #fff; text-shadow: 0px -1px rgba(0,0,0,0.3); }
+.flash.warning { background-color: #c08c00; color: #fff; text-shadow: 0px -1px rgba(0,0,0,0.3); }
+.flash.error { background-color: #c00000; color: #fff; text-shadow: 0px -1px rgba(0,0,0,0.3); }
+
+.flash a.close { color: #000; position: absolute; right: 4px; top: 0px; font-size: 18px; opacity: 0.2; padding: 4px; }
+.flash a.close:hover,.flash a.close:focus { opacity: 0.4; }
+
+
+/* #Instant Press widgets
+================================================== */
+.post_nav {
+    margin: 5px 0px 8px 0px;
+    font-size: 0.9em;
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+}
+.post_title a,
+.post_readmore a,
+.sidebars a,
+.post_responses a {
+    text-decoration: none;
+}
+.post_readmore,
+.post_responses { margin-top: 10px; }
+.post_readmore {float: left;}
+.post_responses { margin-left: 6px; float:left;}
+.post_readmore a,
+.post_responses a
+{
+    line-height: 13.5px; margin-right: 5px; display: inline-block;
+    padding: 3px 5px 3px 5px;
+    /*font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;*/
+    font-size: 12px;
+    color: #3C3C3D;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    background:#ECECEC;
+    white-space: nowrap; overflow: visible;
+    cursor: pointer; text-decoration: none;
+    border: 1px solid #CACACA;
+    -webkit-border-radius: 2px; -moz-border-radius: 2px;
+    -webkit-background-clip: padding-box; border-radius: 2px;
+    outline: none; position: relative; zoom: 1; *display: inline;
+}
+.post_readmore a:hover,
+.post_responses a:hover{
+    color: #FFFFFF; border-color: #388AD4; text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    background-position: 0 -40px; background-color: #2D7DC5;
+}
+.post_title a:hover,
+.sidebars a:hover {
+    /*font-weight: bold;*/
+}
+.post_meta,
+.post_metabottom {font-size: 0.9em;}
+.post_metabottom {border-top: 1px solid #ddd;}
+.post_description {
+    margin: 5px 0px 10px 0px;
+}
+.post_extract {
+margin-bottom: 40px;
+}
+.post_title {
+    color: #d94a1e;
+}
+.post_title a {
+    color: #d94a1e;
+}
+
+/* Sidebars */
+.sidebar {background:#ECECEC;padding: 3px 12px 3px 12px;}
+.sidebars h4  {
+	/*background:#ECECEC;*/
+	border-bottom: 1px solid #CACACA;
+	padding: 3px 5px 3px 5px;
+	margin-bottom: 6px;
+	color: #d94a1e;
+}
+
+.sidebars ul  {
+	list-style: inside;
+
+}
+div#popular-tags ul {display: block; list-style: none;}
+
+div#popular-tags ul li {
+	float:left;
+	padding: 3px;
+}
+.tagcloud_0 {font-size: xx-small;}
+.tagcloud_1 {font-size: small; }
+.tagcloud_2 {font-size: medium; }
+.tagcloud_3 {font-size: large;}
+.tagcloud_4 {font-size: xx-large;}
+.tagcloud_5 {font-size: xx-large;}
+
+/* Results PAGES */
+.i2p_post_index .pagination {
+	padding: 5px;
+	color: #333;
+	border-top: 1px solid #e5e5e5;
+        }
+.i2p_post_index .pagination .title {
+	float: left;
+        }
+.i2p_post_index .pagination .pages {
+	float: right;
+}
+.i2p_post_index .pagination .pages h2 {
+	margin: 30px 0px 30px 0px;
+	color: #555;
+	font-size: 14px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #dedede;
+}
+.i2p_post_index .pagination .pages ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.i2p_post_index .pagination .pages ul li {
+	display: inline;
+}
+.i2p_post_index .pagination .pages ul li a {
+	margin: 0px 10px 0px 0px;
+	color: #555;
+	padding: 5px;
+	text-decoration: none;
+}
+.i2p_post_index .pagination .pages ul li a:hover {
+	background: #e1e1e1;
+}
+.i2p_post_index .pagination .pages .current {
+	font-weight: bold;
+}
+
+
+
+
+
+
+/* #Media Queries
+================================================== */
+
+	/* iPad Portrait/Browser */
+	@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+	/* Mobile/Browser */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape/Browser */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Anything smaller than standard 960 */
+	@media only screen and (max-width: 959px) {}
+
+	/* iPad Portrait Only */
+	@media only screen and (min-width: 768px) and (max-width: 991px) and (max-device-width: 1000px) {}
+
+	/* Mobile Only */
+	@media only screen and (max-width: 767px) and (max-device-width: 1000px) {}
+
+	/* Mobile Landscape Only */
+	@media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/

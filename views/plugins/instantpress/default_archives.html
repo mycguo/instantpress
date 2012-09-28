@@ -1,0 +1,32 @@
+{{extend 'layout.html'}}
+
+<div class="four columns sidebar"> 
+{{=sidebar_aboutme}}
+{{=sidebar_feed}}
+{{=sidebar_categories}}
+{{=sidebar_archive}}
+{{=sidebar_tags}}
+{{=sidebar_search}}
+</div>
+
+
+<div class="eleven columns content"> 
+
+{{ if count>0: }}
+<h3 style="margin-bottom: 15px;">{{=count}} {{=T('post/s in archive')}} <strong>'{{=archive_name}}'</strong></h3>
+{{=last_posts}}
+{{else:}}
+<h2>{{=T('The search for')}} <strong>'{{=archive_name}}'</strong> {{=T('not yield any results')}}</h2>
+<p>
+<ul>
+	     <li>{{=T('Make sure all words are spelled correctly')}}</li>		
+	     <li>{{=T('Use more general keywords')}}</li>
+</ul>
+</p>
+{{pass}}
+
+</div>
+
+
+
+<div style="clear: both;"></div>

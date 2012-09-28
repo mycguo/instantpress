@@ -1,0 +1,69 @@
+{{extend 'plugins/admin/layout.html'}}
+
+<div class="sixteen columns content">
+
+ <div class="post_nav"> Page  &raquo; <a href="#">{{=T('Add')}}</a> </div>
+
+{{=form.custom.begin}}
+
+    <div class="eleven columns">
+
+    <div class="widgetbox">
+        <div class="header"><h4>{{=form.custom.label.title}}</h4></div>
+        <div class="body">{{=form.custom.widget.title}}</div>
+    </div>
+
+    <div class="widgetbox">
+        <div class="header"><h4>{{=form.custom.label.description}}</h4></div>
+        <div class="body"> {{=form.custom.widget.description}}</div>
+    </div>
+
+    <div class="widgetbox">
+        <div class="header"><h4>{{=form.custom.label.keywords_txt}}</h4></div>
+        <div class="body">{{=form.custom.widget.keywords_txt}}</div>
+        <div class="comment">{{=form.custom.comment.keywords_txt}}</div>
+    </div>
+
+    {{=form.custom.submit}}
+
+   </div>
+
+   <div class="four columns">
+
+       <div class="widgetbox">
+            <div class="header"><h4>{{=form.custom.label.categories}}</h4></div>
+            <div class="body">{{=form.custom.widget.categories}}</div>
+        </div>
+
+        <div class="widgetbox">
+            <div class="header"><h4>{{=form.custom.label.published}}</h4></div>
+            <div class="body">{{=form.custom.widget.published}}</div>
+        </div>
+
+        <div class="widgetbox">
+            <div class="header"><h4>{{=form.custom.label.menu_show}}</h4></div>
+            <div class="body">{{=form.custom.widget.menu_show}}</div>
+            <div class="comment">{{=form.custom.comment.menu_show}}</div>
+        </div>
+
+        <div class="widgetbox">
+            <div class="header"><h4>{{=form.custom.label.menu_order}}</h4></div>
+            <div class="body">{{=form.custom.widget.menu_order}}</div>
+            <div class="comment">{{=form.custom.comment.menu_order}}</div>
+        </div>
+
+        <div class="widgetbox">
+            <div class="header"><h4>{{=form.custom.label.is_widget}}</h4></div>
+            <div class="body">{{=form.custom.widget.is_widget}}</div>
+            <div class="comment">{{=form.custom.comment.is_widget}}</div>
+        </div>
+
+   </div>
+
+{{=form.custom.end}}
+
+</div>
+
+
+
+ <div style="clear: both;"></div>

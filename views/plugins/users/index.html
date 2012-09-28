@@ -1,0 +1,21 @@
+{{extend 'plugins/admin/layout.html'}}
+
+<div class="sixteen columns content">
+
+{{if passw!='':}}
+
+<p>Seem that is the first time you run instantpress. New 'Admin' user has been created.</p>
+
+<blockquote>
+<strong>User: Admin</strong><br />
+<strong>Pass: {{=passw}}</strong>
+</blockquote>
+
+<p>NOTE: Please write down this log in info, this will not showed again.</p>
+
+<h3><a href="{{=URL('default','user/login',vars={'_next':'/%s/instantpress'%request.application})}}">NEXT STEP: Click in this link to log in.</a></h3>
+
+{{pass}}
+
+</div>
+<div style="clear: both;"></div>

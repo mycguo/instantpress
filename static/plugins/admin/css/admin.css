@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/* This file is contains the following sections: */
+
+a.button32 span.icon { display: inline-block; width: 32px; height: 32px; margin: auto 7px auto auto; position: relative; top: 2px; background-image: url('../images/32/out.png'); background-repeat: no-repeat; }
+a.button32 span.icon.pagenew { background-position: 0 0 }
+a.button32 span.icon.pages { background-position: 0 -32px }
+a.button32 span.icon.articles { background-position: 0 -64px }
+a.button32 span.icon.articlenew { background-position: 0 -96px }
+a.button32 span.icon.pageblank { background-position: 0 -128px }
+a.button32 span.icon.users { background-position: 0 -160px }
+a.button32 span.icon.tags { background-position: 0 -192px }
+a.button32 span.icon.wiki { background-position: 0 -224px }
+a.button32 span.icon.widgets { background-position: 0 -256px }
+a.button32 span.icon.uploads { background-position: 0 -288px }
+
+a.button16 span.icon { display: inline-block; width: 16px; height: 16px; margin: auto 2px auto auto; position: relative; background-image: url('../images/16/out.png'); background-repeat: no-repeat; }
+a.button16 span.icon.activate { background-position: 0 0 }
+a.button16 span.icon.csv { background-position: 0 -16px }
+a.button16 span.icon.remove { background-position: 0 -32px }
+a.button16 span.icon.edit { background-position: 0 -48px }
+a.button16 span.icon.table { background-position: 0 -64px }
+a.button16 span.icon.view { background-position: 0 -80px }
+a.button16 span.icon.check { background-position: 0 -96px }
+a.button16 span.icon.disable { background-position: 0 -112px }
+a.button16 span.icon.group { background-position: 0 -128px }
+a.button16 span.icon.pass { background-position: 0 -144px }
+a.button16 span.icon.add { background-position: 0 -160px }
+a.button16 span.icon.back { background-position: 0 -176px }
+
+.widgetbox {margin: 10px 5px 10px 0px; padding: 5px; border: 1px solid #dedede;}
+.widgetbox .header {background-color: #f1f1f1; padding: 3px;}
+.widgetbox .body {font-size: 11px; padding: 3px;}
+.widgetbox .comment {font-size: 11px; padding: 2px;}
+
+.widgetbox .body textarea, .widgetbox .body input[type=text], .widgetbox .body
+{
+    width: 99%;
+    margin: 0px;
+}
+.widgetbox .body input[type=text], .widgetbox .body select,
+{
+    height: 28px;
+}
+
+.u_image li {/*line-height: 0px;*/ margin-bottom: 2px;}
+.u_image { float: left; padding: 5px;}
+.u_image img { cursor: hand;}
+
+.markItUpContainer textarea {display: inline !important;}
+
+/* FIX */
+table#i2p_posts_categories label {display: inline !important;}

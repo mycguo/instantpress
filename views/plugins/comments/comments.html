@@ -1,0 +1,56 @@
+<div id="comments">
+	<div class="title">{{=title}}</div>
+	<div class="replyform">{{=form}}</div>
+	<div class="order">{{=T('Order by')}} {{=plg.orderbydate()}}, {{=plg.orderbyvotes()}}</div>
+
+	{{if comments:}}
+	{{=pagination}}
+        {{pass}}
+
+        {{for comment in comments:}}
+	{{
+	icon_voteup = IMG(_src=URL('static','plugins/comments/images/thumbs_up.png'), \
+			_alt="Vote up")
+	link_voteup = A(icon_voteup, _href='javascript: void(0);', \
+			_onclick="if(!confirm('%s')){ return}; ajax('%s', [], ':eval');"%(T('Vote this up?'),URL("comments","vote_up", args=[comment[plg.table_comments].id])), \
+			_title="Vote up")
+	icon_votedown = IMG(_src=URL('static','plugins/comments/images/thumbs_down.png'), \
+			_alt="Vote up")
+	link_votedown = A(icon_votedown, _href='javascript: void(0);', \
+			_onclick="if(!confirm('%s')){ return}; ajax('%s', [], ':eval');"%(T('Vote this down?'),URL("comments","vote_down", args=[comment[plg.table_comments].id])), \
+			_title="Vote down")
+	}}
+	<div class="comment" id="comment-{{=comment[plg.table_comments].id}}">
+		<div class="author">
+			<div class="avatar">{{=plg.get_user_avatar(comment[plg.table_comments].author_id)}}</div>
+			<div class="name"><span style='font-size: 13px;font-weight: bold;'>
+			{{=plg.get_user_title(comment[plg.table_comments].author_id)}}</span>
+			({{=plg.count_votes_user(comment[plg.table_comments].author_id)}} {{=T('votes')}})
+			</div>
+			<div class="date">
+			{{=plg.generate_comment_on(comment[plg.table_comments].comment_on)}}
+			</div>
+			<div class="inreply">
+			{{=plg.in_reply_to(comment[plg.table_comments].reply_id,comment[plg.table_comments].id)}}
+			</div>
+			<div class="votes">
+				<div class="voteup">{{=link_voteup}}</div>
+				<div class="votecount">{{=plg.count_votes(comment[plg.table_comments].id)}} {{=T('votes')}}</div>
+				<div class="votedown">{{=link_votedown}}</div>
+			</div>
+
+			<div style="clear: both;"></div>
+		</div>
+		<div class="response">{{=plg.render_markup_comment(comment[plg.table_comments].comment)}}</div>
+		<div class="menu">{{=plg.generate_buttons(comment[plg.table_comments].id)}}</div>
+		<div style="clear: both;"></div>
+	</div>
+	{{pass}}
+
+	{{if comments:}}
+	{{=pagination}}
+	{{pass}}
+
+</div>
+
+{{=editor}}

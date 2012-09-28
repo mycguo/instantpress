@@ -1,0 +1,29 @@
+{{extend 'layout.html'}}
+
+<div class="sixteen columns content">
+
+<h2>{{=T( request.args(0).replace('_',' ').capitalize() )}}</h2>
+<div id="web2py_user_form">
+{{=form}}
+{{if request.args(0)=='login':}}
+{{if not 'register' in boilerplate.auth.settings.actions_disabled:}}
+<br/><a href="{{=URL(r=request,args='register')}}">{{=T('Register')}}</a>
+{{pass}}
+{{if not 'request_reset_password' in boilerplate.auth.settings.actions_disabled:}}
+<br/><a href="{{=URL(r=request,args='request_reset_password')}}">{{=T('Lost password')}}</a>
+{{pass}}
+{{if not 'retrieve_username' in boilerplate.auth.settings.actions_disabled:}}
+<br/><a href="{{=URL(r=request,args='retrieve_username')}}">{{=T('Forgot username?')}}</a>
+{{pass}}
+{{pass}}
+</div>
+
+
+</div>
+<div style="clear: both;"></div>
+
+<script language="javascript">
+<!--
+ jQuery("#web2py_user_form input:visible:enabled:first").focus();
+//-->
+</script>

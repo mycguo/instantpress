@@ -1,0 +1,16 @@
+{{extend 'plugins/admin/layout.html'}}
+
+<div class="sixteen columns content">
+
+<div class="post_nav"> Categories  &raquo; <a href="#">{{=T('Categories')}}</a> </div>
+
+<div class="toolbar">
+{{=A(SPAN(_class='icon add'), SPAN(T('Add')), _href="%s"%URL(i2padmin.controller_name,'catadd'), _class='w2p_trap button16')}}
+</div>
+
+{{=table}}
+</div>
+
+
+
+ <div style="clear: both;"></div>

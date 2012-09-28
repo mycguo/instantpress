@@ -1,0 +1,55 @@
+<!DOCTYPE html lang="{{=T.accepted_language or 'en'}}">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="{{=T.accepted_language or 'en'}}"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="{{=T.accepted_language or 'en'}}"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="{{=T.accepted_language or 'en'}}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{{=response.title}}</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{{=URL('static','plugins/admin/images/favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{=URL('static','plugins/admin/images/favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{=URL('static','plugins/admin/images/apple-touch-icon-72x72.png')}}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{=URL('static','plugins/admin/images/apple-touch-icon-114x114.png')}}" />
+
+    <script type="text/javascript"><!--
+    // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+    var w2p_ajax_confirm_message = "{{=T('Are you sure you want to delete this object?')}}";
+    var w2p_ajax_date_format = "{{=T('%Y-%m-%d')}}";
+    var w2p_ajax_datetime_format = "{{=T('%Y-%m-%d %H:%M:%S')}}";
+    //--></script>
+
+    {{  #This is a default render layout see modules/boilerplate.py
+        boilerplate.render_layout()
+        =boilerplate.render_metanames()
+        response.include_files()
+        =boilerplate.render_scriptsonhead()
+        =boilerplate.render_scriptsonready()
+        }}
+</head>
+<body>
+
+<div class="flash success container">{{=response.flash or ''}}</div>
+
+{{include}}
+
+{{=boilerplate.render_scriptsonbottom()}}
+
+    <!--[if lt IE 7 ]>
+    <script src="{{=URL('static','js/dd_belatedpng.js')}}"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+    <![endif]-->
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+{{extend 'plugins/admin/layout.html'}}
+
+
+<div class="sixteen columns content">
+
+<div class="post_nav"> Page  &raquo; <a href="#">{{=T("Admin panel")}}</a> </div>
+
+<div class="four columns widgetbox">
+<div class="header"><h4>{{=T("Pages")}}</h4></div>
+<div class="body">
+<a href="{{=URL('instantpress','pageadd')}}" class="button32"><span class="icon pagenew"></span></a>
+<a href="{{=URL('instantpress','pages')}}" class="button32"><span class="icon articles"></span></a>
+<a href="{{=URL('instantpress','pageswidgets')}}" class="button32"><span class="icon widgets"></span></a>
+</div>
+</div>
+
+<div class="four columns widgetbox">
+<div class="header"><h4>{{=T("Articles")}}</h4></div>
+<div class="body">
+<a href="{{=URL('instantpress','postadd')}}" class="button32"><span class="icon articlenew"></span></a>
+<a href="{{=URL('instantpress','posts')}}" class="button32"><span class="icon articles"></span></a>
+</div>
+</div>
+
+<div class="four columns widgetbox">
+<div class="header"><h4>{{=T("Category")}}</h4></div>
+<div class="body">
+<a href="{{=URL('instantpress','catadd')}}" class="button32"><span class="icon pagenew"></span></a>
+<a href="{{=URL('instantpress','categories')}}" class="button32"><span class="icon tags"></span></a>
+</div>
+</div>
+
+<div class="four columns widgetbox">
+<div class="header"><h4>{{=T("Users")}}</h4></div>
+<div class="body">
+<a href="{{=URL('users','users')}}" class="button32"><span class="icon pagenew"></span></a>
+<a href="{{=URL('users','users')}}" class="button32"><span class="icon users"></span></a>
+</div>
+</div>
+
+<div class="four columns widgetbox">
+<div class="header"><h4>{{=T("Uploads")}}</h4></div>
+<div class="body">
+<a href="{{=URL('instantpress','uploads')}}" class="button32"><span class="icon pagenew"></span></a>
+<a href="{{=URL('instantpress','uploads')}}" class="button32"><span class="icon uploads"></span></a>
+</div>
+</div>
+
+
+
+</div>
+<div style="clear: both;"></div>
